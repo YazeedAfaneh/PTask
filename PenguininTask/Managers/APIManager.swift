@@ -42,7 +42,7 @@ class APIManager {
                 completion(.success(responseObject))
                 print(responseObject.results.first?.urls.raw)
             }else{
-                print("########### DECODING FAILED #########")
+                completion(.failure(error!))
             }
             
         }

@@ -76,9 +76,7 @@
 				D73B3074283D2F4A00F2C26C /* Managers */,
 				D73B3060283D2E1300F2C26C /* AppDelegate.swift */,
 				D73B3062283D2E1300F2C26C /* SceneDelegate.swift */,
-				D73B3066283D2E1300F2C26C /* Main.storyboard */,
 				D73B3069283D2E1600F2C26C /* Assets.xcassets */,
-				D73B306B283D2E1600F2C26C /* LaunchScreen.storyboard */,
 				D73B306E283D2E1600F2C26C /* Info.plist */,
 			);
 			path = PenguininTask;
@@ -122,6 +120,8 @@
 		D73B3086283D353D00F2C26C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D73B306B283D2E1600F2C26C /* LaunchScreen.storyboard */,
+				D73B3066283D2E1300F2C26C /* Main.storyboard */,
 				D73B308B283D391600F2C26C /* PhotosCollectionViewCell.swift */,
 				D73B308C283D391600F2C26C /* PhotosCollectionViewCell.xib */,
 			);

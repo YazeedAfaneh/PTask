@@ -43,12 +43,14 @@ class SearchViewController: UIViewController {
             switch response {
             case .success(let resp):
                 self.photos = resp.results
-                print("########################" , resp.results)
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
-            case .failure(_):
-                print("FAILED FROM HOMCONTROLER")
+            case .failure(let error):
+                let alert = UIAlertController(title: "Failer", message: error.localizedDescription, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: true)
             }
         }
     }

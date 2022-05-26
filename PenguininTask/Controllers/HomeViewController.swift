@@ -15,11 +15,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     
     }
     
     @IBAction func searchTapped(_ sender: Any) {
-        
+        if !(searchTextField.text?.isEmpty ?? false){
         if let searchKey = searchTextField.text {
             self.searchKey = searchKey
         }
@@ -28,5 +29,11 @@ class HomeViewController: UIViewController {
         let searchVC = storyBoard.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
         searchVC.searchKey = self.searchKey
         self.navigationController?.pushViewController(searchVC, animated:true)
+        }
+        else{
+            let alert = UIAlertController(title: "Error", message: "Text Field is empty", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+            self.present(alert,animated: true)
+        }
     }
 }
